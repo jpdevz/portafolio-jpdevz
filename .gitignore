@@ -1,0 +1,32 @@
+# ===== Python / Django =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+env/
+.venv/
+venv/
+# Si usas collectstatic en backend/
+staticfiles/
+media/
+
+# ===== Node / Vite / Vercel =====
+node_modules/
+dist/
+.vite/
+.vercel/
+
+# ===== Secrets (no subas variables) =====
+# Conserva .env.example si lo usas como plantilla
+*.env
+*.env.*
+**/.env
+**/.env.*
+
+# ===== macOS =====
+.DS_Store
+
+# ===== IDE (opcional) =====
+.vscode/
+.idea/
