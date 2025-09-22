@@ -1,4 +1,3 @@
-// src/pages/Contacto.tsx
 import { FormEvent, useState } from 'react'
 
 export function Contacto() {
@@ -7,21 +6,31 @@ export function Contacto() {
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setStatus('enviando')
-    // 80/20: de momento solo log; en Semana 2/3 conectamos backend o servicio
     const data = Object.fromEntries(new FormData(e.currentTarget) as any)
     console.log('Formulario contacto:', data)
-    setTimeout(() => setStatus('ok'), 300)
+    setTimeout(() => setStatus('ok'), 400)
   }
 
   return (
-    <section>
-      <h1>Contacto</h1>
-      <form onSubmit={onSubmit} className="form">
-        <label>Nombre<input name="nombre" required /></label>
-        <label>Email<input name="email" type="email" required /></label>
-        <label>Mensaje<textarea name="mensaje" required rows={4} /></label>
-        <button disabled={status==='enviando'}>Enviar</button>
-        {status==='ok' && <p>¡Gracias! Te responderé pronto.</p>}
+    <section className="max-w-xl">
+      <h1 className="text-2xl font-bold">Contacto</h1>
+      <form onSubmit={onSubmit} className="grid gap-4 mt-4">
+        <label className="grid gap-1">
+          <span className="text-sm font-medium">Nombre</span>
+          <input name="nombre" required className="rounded-md border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-neutral-400"/>
+        </label>
+        <label className="grid gap-1">
+          <span className="text-sm font-medium">Email</span>
+          <input type="email" name="email" required className="rounded-md border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-neutral-400"/>
+        </label>
+        <label className="grid gap-1">
+          <span className="text-sm font-medium">Mensaje</span>
+          <textarea name="mensaje" rows={4} required className="rounded-md border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-neutral-400"/>
+        </label>
+        <button disabled={status==='enviando'} className="rounded-md bg-neutral-900 text-white px-4 py-2 font-medium hover:bg-neutral-800 disabled:opacity-60">
+          Enviar
+        </button>
+        {status==='ok' && <p className="text-green-700">¡Gracias! Te responderé pronto.</p>}
       </form>
     </section>
   )
