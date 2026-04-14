@@ -1,5 +1,7 @@
 import { useEffect } from "react"
 import { AnimatedBackground } from "../components/AnimatedBackground"
+import { CardProyecto } from "../components/CardProyecto"
+import { projects } from "../data/projects"
 
 export function Landing(){
   useEffect(() => {
@@ -73,12 +75,12 @@ export function Landing(){
           <div className="hero-content">
             <h1 className="text-[2.75rem] md:text-[4rem] font-bold mb-5"
               style={{background:'var(--gradient)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
-              Backend Developer & Cloud Architect
+              Full Stack Developer & AI-Augmented Builder
             </h1>
-            <div className="hero-subtitle">🚀 Profesional de Tecnología</div>
+            <div className="hero-subtitle">🚀 Cofundador & Arquitecto de Soluciones</div>
             <p className="hero-description text-[1.1rem] text-[var(--text-dim)] mb-10">
-              Apasionado por crear soluciones tecnológicas escalables. Combino desarrollo Backend con Python,
-              arquitectura Cloud (AWS en formación) y neurociencia aplicada para potenciar la productividad digital.
+              Combino la visión de negocio con la robustez del desarrollo Backend y la potencia de la IA para crear
+              productos digitales que no solo funcionan, sino que escalan y resuelven problemas reales.
             </p>
             <div className="flex gap-4 flex-wrap">
               <a href="#projects" className="cta-primary px-5 py-3 rounded-md font-semibold"
@@ -113,11 +115,11 @@ export function Landing(){
           <h2 className="section-title">Sobre mí</h2>
           <div className="grid md:grid-cols-2 gap-20 items-start">
             <div className="about-text fade-in text-[1.1rem] text-[var(--text-dim)] leading-8">
-              <p>Como <span className="highlight">Backend Developer especializado en Python</span>, me enfoco en crear arquitecturas robustas y escalables…</p>
+              <p>Como <span className="highlight">Full Stack Developer & AI-Augmented Builder</span>, me especializo en transformar visiones de negocio en arquitecturas robustas, escalables y eficientes.</p>
               <br />
-              <p>Actualmente me estoy <span className="highlight">certificando en AWS</span>… Integro <span className="highlight">neurociencia aplicada</span>…</p>
+              <p>Cofundador de ventures tecnológicas, actualmente me estoy <span className="highlight">certificando en AWS</span> e integro principios de <span className="highlight">neurociencia aplicada</span> para optimizar la productividad digital y la experiencia de usuario.</p>
               <br />
-              <p>🌱 <span className="highlight">Siempre aprendiendo:</span> … cloud computing y desarrollo backend.</p>
+              <p>🌱 <span className="highlight">Enfoque actual:</span> Desarrollo de agentes de IA autónomos, optimización de infraestructuras cloud y arquitectura de software orientada a resultados.</p>
             </div>
 
             <div className="skills-section fade-in">
@@ -129,17 +131,24 @@ export function Landing(){
                 </div>
               </div>
               <div className="skills-category">
-                <h3>☁️ Cloud & DevOps</h3>
+                <h3>🤖 AI & Automation</h3>
                 <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">AWS (en formación)</span><span className="skill-tag">Docker</span>
-                  <span className="skill-tag">CI/CD</span><span className="skill-tag">Linux</span>
+                  <span className="skill-tag">Prompt Engineering</span><span className="skill-tag">AI Agents</span>
+                  <span className="skill-tag">LLM APIs</span><span className="skill-tag">Cursor IDE</span>
                 </div>
               </div>
               <div className="skills-category">
-                <h3>🔍 Gestión & Optimización</h3>
+                <h3>☁️ Cloud & Ops</h3>
+                <div className="skills-list flex flex-wrap gap-2">
+                  <span className="skill-tag">AWS (in progress)</span><span className="skill-tag">Docker</span>
+                  <span className="skill-tag">Linux</span><span className="skill-tag">CI/CD</span>
+                </div>
+              </div>
+              <div className="skills-category">
+                <h3>💼 Management & Vision</h3>
                 <div className="skills-list flex flex-wrap gap-2">
                   <span className="skill-tag">LMS Platforms</span><span className="skill-tag">Process Optimization</span>
-                  <span className="skill-tag">Neurociencia Aplicada</span>
+                  <span className="skill-tag">Product Vision</span>
                 </div>
               </div>
             </div>
@@ -153,39 +162,11 @@ export function Landing(){
         <div className="container">
           <h2 className="section-title fade-in">Proyectos Destacados</h2>
           <div className="projects-grid grid gap-10 md:grid-cols-2 xl:grid-cols-3">
-            {/* Card 1 */}
-            <div className="project-card fade-in">
-              <div className="project-icon">🧠</div>
-              <h3 className="text-[1.4rem] mb-3">NeuroLMS Platform</h3>
-              <p className="project-description">Plataforma LMS optimizada…</p>
-              <div className="tech-stack flex flex-wrap gap-2 mb-6">
-                <span className="tech-item">Django</span><span className="tech-item">PostgreSQL</span>
-                <span className="tech-item">Redis</span><span className="tech-item">Celery</span>
+            {projects.slice(0, 3).map((project) => (
+              <div key={project.title} className="fade-in">
+                <CardProyecto {...project} />
               </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="project-card fade-in">
-              <div className="project-icon">☁️</div>
-              <h3 className="text-[1.4rem] mb-3">Cloud Migration API</h3>
-              <p className="project-description">API robusta para migración…</p>
-              <div className="tech-stack flex flex-wrap gap-2 mb-6">
-                <span className="tech-item">Python</span><span className="tech-item">AWS S3</span>
-                <span className="tech-item">Lambda</span><span className="tech-item">CloudWatch</span>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="project-card fade-in">
-              <div className="project-icon">⚡</div>
-              <h3 className="text-[1.4rem] mb-3">Process Optimizer</h3>
-              <p className="project-description">Sistema de automatización…</p>
-              <div className="tech-stack flex flex-wrap gap-2 mb-6">
-                <span className="tech-item">Python</span><span className="tech-item">FastAPI</span>
-                <span className="tech-item">MongoDB</span><span className="tech-item">Docker</span>
-              </div>
-            </div>
-
+            ))}
           </div>
         </div>
       </section>
