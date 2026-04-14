@@ -30,3 +30,6 @@ dist/
 # ===== IDE (opcional) =====
 .vscode/
 .idea/
+
+# ===== Documents =====
+CV_JP_Pizarro_md.md
