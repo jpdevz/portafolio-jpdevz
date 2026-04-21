@@ -7,6 +7,13 @@ export const projects = [
     demoUrl: 'https://nexcommit.com'
   },
   {
+    title: 'PDF to Markdown Converter',
+    description: 'Aplicación web Flask que convierte archivos PDF a formato Markdown utilizando pdf-inspector de Firecrawl. Interfaz moderna con drag & drop y diseño oscuro profesional.',
+    tags: ['Flask', 'Python', 'pdf-inspector', 'Firecrawl'],
+    repoUrl: '',
+    demoUrl: 'http://127.0.0.1:5001'
+  },
+  {
     title: 'Nomad Lexis',
     description: 'Centro de idiomas co-fundado con el propósito de conectar culturas, ampliar horizontes y abrir oportunidades profesionales y personales a través del lenguaje.',
     tags: ['WordPress', 'Architecture', 'Conversion'],
