@@ -11,7 +11,7 @@ export const projects = [
     description: 'Aplicación web Flask que convierte archivos PDF a formato Markdown utilizando pdfplumber. Interfaz moderna con drag & drop y diseño oscuro profesional.',
     tags: ['Flask', 'Python', 'pdfplumber'],
     repoUrl: 'https://github.com/jpdevz/pdf-to-md-jpdevz',
-    demoUrl: ''
+    demoUrl: 'https://pdf-to-md-jpdevz.onrender.com'
   },
   {
     title: 'Nomad Lexis',
