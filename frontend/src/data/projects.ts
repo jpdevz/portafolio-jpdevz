@@ -8,9 +8,9 @@ export const projects = [
   },
   {
     title: 'PDF to Markdown Converter',
-    description: 'Aplicación web Flask que convierte archivos PDF a formato Markdown utilizando pdf-inspector de Firecrawl. Interfaz moderna con drag & drop y diseño oscuro profesional.',
-    tags: ['Flask', 'Python', 'pdf-inspector', 'Firecrawl'],
-    repoUrl: '',
+    description: 'Aplicación web Flask que convierte archivos PDF a formato Markdown utilizando pdfplumber. Interfaz moderna con drag & drop y diseño oscuro profesional.',
+    tags: ['Flask', 'Python', 'pdfplumber'],
+    repoUrl: 'https://github.com/jpdevz/pdf-to-md-jpdevz',
     demoUrl: ''
   },
   {
