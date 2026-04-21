@@ -11,7 +11,7 @@ export const projects = [
     description: 'Aplicación web Flask que convierte archivos PDF a formato Markdown utilizando pdf-inspector de Firecrawl. Interfaz moderna con drag & drop y diseño oscuro profesional.',
     tags: ['Flask', 'Python', 'pdf-inspector', 'Firecrawl'],
     repoUrl: '',
-    demoUrl: 'http://127.0.0.1:5001'
+    demoUrl: ''
   },
   {
     title: 'Nomad Lexis',
