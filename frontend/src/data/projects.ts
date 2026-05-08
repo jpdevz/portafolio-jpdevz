@@ -16,7 +16,7 @@ export const projects = [
   {
     title: 'NexCommit',
     description: 'Agencia tecnológica co-fundada, con más de 7 clientes en producción. Especializada en automatización con IA y desarrollo web avanzado.',
-    tags: ['WordPress', 'Python', 'Django', 'AI Automation'],
+    tags: ['WordPress', 'Python', 'Django', 'AI Automation', 'Process Automation'],
     repoUrl: '',
     demoUrl: 'https://nexcommit.com'
   },
@@ -29,14 +29,14 @@ export const projects = [
   },
   {
     title: 'Nomad Lexis',
-    description: 'Centro de idiomas co-fundado con el propósito de conectar culturas, ampliar horizontes y abrir oportunidades profesionales y personales a través del lenguaje.',
+    description: 'Centro de idiomas con infraestructura digital optimizada para la gestión automática de alumnos y procesos educativos.',
     tags: ['WordPress', 'Architecture', 'Conversion'],
     repoUrl: '',
     demoUrl: 'https://nomadlexis.com'
   },
   {
     title: 'Sistema de Booking/Scheduling',
-    description: 'Sistema de reservas escalable con autenticación segura mediante JWT y gestión de horarios.',
+    description: 'Sistema de reservas diseñado para escalabilidad y seguridad de datos en operaciones críticas, con autenticación JWT y gestión robusta de horarios.',
     tags: ['Django', 'PostgreSQL', 'JWT'],
     repoUrl: '',
     demoUrl: ''

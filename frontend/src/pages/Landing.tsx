@@ -75,9 +75,9 @@ export function Landing(){
           <div className="hero-content">
             <h1 className="text-[2.75rem] md:text-[4rem] font-bold mb-5"
               style={{background:'var(--gradient)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
-              Business Solutions Architect & Automation Expert
+              Business Solutions & Power Platform Expert
             </h1>
-            <div className="hero-subtitle">🚀 Arquitectura de Negocio & Automatización</div>
+            <div className="hero-subtitle">🚀 Arquitecto de Soluciones & Especialista en Automatización</div>
             <p className="hero-description text-[1.1rem] text-[var(--text-dim)] mb-10">
               Combino la visión de negocio con la robustez del desarrollo Backend y la potencia de la IA para crear
               productos digitales que no solo funcionan, sino que escalan y resuelven problemas reales.
@@ -100,10 +100,9 @@ export function Landing(){
               <div className="code-content">
                 <span className="code-line"><span className="keyword">class</span> <span className="function">BusinessSolutionsArchitect</span>:</span>
                 <span className="code-line">  <span className="keyword">def</span> <span className="function">__init__</span>(<span className="keyword">self</span>):</span>
-                <span className="code-line">    <span className="keyword">self</span>.core = [<span className="string">"Python"</span>, <span className="string">"Backend Logic"</span>, <span className="string">"LMS Management"</span>]</span>
-                <span className="code-line">    <span className="keyword">self</span>.experienceInLogistics = <span className="keyword">True</span></span>
-                <span className="code-line">    <span className="keyword">self</span>.specialization = <span className="string">"Process Optimization"</span></span>
-                <span className="code-line">  <span className="comment"># Liderando transformación digital 🎯</span></span>
+                <span className="code-line">    <span className="keyword">self</span>.skills = [<span className="string">"PowerPlatform"</span>, <span className="string">"SQL"</span>, <span className="string">"Python"</span>, <span className="string">"AI-Automation"</span>]</span>
+                <span className="code-line">    <span className="keyword">self</span>.passion = <span className="string">"Business Efficiency"</span></span>
+                <span className="code-line">  <span className="comment"># Optimizando operaciones con tecnología 🎯</span></span>
               </div>
             </div>
           </div>
@@ -116,36 +115,32 @@ export function Landing(){
           <h2 className="section-title">Sobre mí</h2>
           <div className="grid md:grid-cols-2 gap-20 items-start">
             <div className="about-text fade-in text-[1.1rem] text-[var(--text-dim)] leading-8">
-              <p>Especializado en transformar procesos complejos en soluciones digitales eficientes. Utilizo Python para desarrollos a medida y Power Platform para despliegues rápidos que aceleran el retorno de inversión en logística y educación.</p>
-              <br />
-              <p>Como <span className="highlight">Business Solutions Architect & Automation Expert</span>, me especializo en transformar visiones de negocio en arquitecturas robustas, escalables y eficientes.</p>
-              <br />
-              <p>Cofundador de ventures tecnológicas, actualmente me estoy <span className="highlight">certificando en AWS</span> e integro principios de <span className="highlight">neurociencia aplicada</span> para optimizar la productividad digital y la experiencia de usuario.</p>
-              <br />
-              <p>🌱 <span className="highlight">Enfoque actual:</span> Desarrollo de agentes de IA autónomos, optimización de infraestructuras cloud y arquitectura de software orientada a resultados.</p>
+              <p>Como <span className="highlight">Business Solutions Architect</span>, me especializo en transformar procesos operativos en arquitecturas digitales de alto rendimiento. Mi enfoque es la eficiencia radical: utilizo Power Platform y SQL para automatizar la logística y la educación, reduciendo costos y eliminando errores manuales.</p>
             </div>
 
             <div className="skills-section fade-in">
               <div className="skills-category">
-                <h3>● Core</h3>
+                <h3>● Data & Core Logic</h3>
                 <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">Python</span><span className="skill-tag">Backend Logic</span>
-                  <span className="skill-tag">LMS Management (Moodle)</span>
+                  <span className="skill-tag">SQL (PostgreSQL/SQL Server)</span>
+                  <span className="skill-tag">Dataverse</span>
+                  <span className="skill-tag">Python</span>
                 </div>
               </div>
               <div className="skills-category">
-                <h3>● Ecosystems</h3>
+                <h3>● Power Platform</h3>
                 <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">Power Platform (Power Apps & Automate)</span>
-                  <span className="skill-tag">Docker</span><span className="skill-tag">CI/CD</span>
+                  <span className="skill-tag">Power Apps (Canvas/Model-Driven)</span>
+                  <span className="skill-tag">Power Automate</span>
+                  <span className="skill-tag">AI Builder</span>
                 </div>
               </div>
               <div className="skills-category">
-                <h3>● Focus</h3>
+                <h3>● Management & Vision</h3>
                 <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">Automatización de procesos de negocio</span>
-                  <span className="skill-tag">Optimización logística</span>
-                  <span className="skill-tag">Arquitectura escalable</span>
+                  <span className="skill-tag">LMS Platforms</span>
+                  <span className="skill-tag">Process Optimization</span>
+                  <span className="skill-tag">ROI Analysis</span>
                 </div>
               </div>
             </div>
@@ -174,7 +169,7 @@ export function Landing(){
           <h2 className="section-title fade-in">Conectemos</h2>
           <div className="max-w-[800px] mx-auto text-center">
             <p className="contact-description fade-in text-[1.2rem] text-[var(--text-dim)] mb-12">
-              ¿Tienes un proyecto de backend o necesitas arquitectura cloud? Hablemos…
+              ¿Tienes un proceso operativo que necesite automatización o buscas arquitectura de soluciones eficientes? Hablemos...
             </p>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 mb-12">
               <a className="contact-item fade-in" href="mailto:jpizarro@jpdevz.com">
