@@ -1,5 +1,19 @@
 export const projects = [
   {
+    title: 'Moodle-Jitsi Attendance',
+    description: 'Sistema de bajo costo para la gestión de videoconferencias y control de asistencia automatizado, integrando Jitsi con Moodle para reducir costos operativos en un 100% respecto a licencias pagas.',
+    tags: ['Moodle', 'Jitsi', 'PHP', 'Automation'],
+    repoUrl: '',
+    demoUrl: ''
+  },
+  {
+    title: 'WPGR-Catalogo-Miembros',
+    description: 'Estructura de datos dinámica para la gestión masiva de miembros y sincronización de perfiles en entornos empresariales.',
+    tags: ['WordPress', 'Data Architecture', 'Profile Sync'],
+    repoUrl: '',
+    demoUrl: ''
+  },
+  {
     title: 'NexCommit',
     description: 'Agencia tecnológica co-fundada, con más de 7 clientes en producción. Especializada en automatización con IA y desarrollo web avanzado.',
     tags: ['WordPress', 'Python', 'Django', 'AI Automation'],

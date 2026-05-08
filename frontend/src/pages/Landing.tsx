@@ -75,9 +75,9 @@ export function Landing(){
           <div className="hero-content">
             <h1 className="text-[2.75rem] md:text-[4rem] font-bold mb-5"
               style={{background:'var(--gradient)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
-              Full Stack Developer & AI-Augmented Builder
+              Business Solutions Architect & Automation Expert
             </h1>
-            <div className="hero-subtitle">🚀 Cofundador & Arquitecto de Soluciones</div>
+            <div className="hero-subtitle">🚀 Arquitectura de Negocio & Automatización</div>
             <p className="hero-description text-[1.1rem] text-[var(--text-dim)] mb-10">
               Combino la visión de negocio con la robustez del desarrollo Backend y la potencia de la IA para crear
               productos digitales que no solo funcionan, sino que escalan y resuelven problemas reales.
@@ -98,11 +98,12 @@ export function Landing(){
                 <div className="control green"></div>
               </div>
               <div className="code-content">
-                <span className="code-line"><span className="keyword">class</span> <span className="function">BackendDeveloper</span>:</span>
+                <span className="code-line"><span className="keyword">class</span> <span className="function">BusinessSolutionsArchitect</span>:</span>
                 <span className="code-line">  <span className="keyword">def</span> <span className="function">__init__</span>(<span className="keyword">self</span>):</span>
-                <span className="code-line">    <span className="keyword">self</span>.skills = [<span className="string">"Python"</span>, <span className="string">"Django"</span>, <span className="string">"AWS"</span>]</span>
-                <span className="code-line">    <span className="keyword">self</span>.passion = <span className="string">"Scalable Solutions"</span></span>
-                <span className="code-line">  <span className="comment"># Transformando ideas en código 🧠</span></span>
+                <span className="code-line">    <span className="keyword">self</span>.core = [<span className="string">"Python"</span>, <span className="string">"Backend Logic"</span>, <span className="string">"LMS Management"</span>]</span>
+                <span className="code-line">    <span className="keyword">self</span>.experienceInLogistics = <span className="keyword">True</span></span>
+                <span className="code-line">    <span className="keyword">self</span>.specialization = <span className="string">"Process Optimization"</span></span>
+                <span className="code-line">  <span className="comment"># Liderando transformación digital 🎯</span></span>
               </div>
             </div>
           </div>
@@ -115,7 +116,9 @@ export function Landing(){
           <h2 className="section-title">Sobre mí</h2>
           <div className="grid md:grid-cols-2 gap-20 items-start">
             <div className="about-text fade-in text-[1.1rem] text-[var(--text-dim)] leading-8">
-              <p>Como <span className="highlight">Full Stack Developer & AI-Augmented Builder</span>, me especializo en transformar visiones de negocio en arquitecturas robustas, escalables y eficientes.</p>
+              <p>Especializado en transformar procesos complejos en soluciones digitales eficientes. Utilizo Python para desarrollos a medida y Power Platform para despliegues rápidos que aceleran el retorno de inversión en logística y educación.</p>
+              <br />
+              <p>Como <span className="highlight">Business Solutions Architect & Automation Expert</span>, me especializo en transformar visiones de negocio en arquitecturas robustas, escalables y eficientes.</p>
               <br />
               <p>Cofundador de ventures tecnológicas, actualmente me estoy <span className="highlight">certificando en AWS</span> e integro principios de <span className="highlight">neurociencia aplicada</span> para optimizar la productividad digital y la experiencia de usuario.</p>
               <br />
@@ -124,31 +127,25 @@ export function Landing(){
 
             <div className="skills-section fade-in">
               <div className="skills-category">
-                <h3>✔ Backend & Database</h3>
+                <h3>● Core</h3>
                 <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">Python</span><span className="skill-tag">Django</span>
-                  <span className="skill-tag">PostgreSQL</span><span className="skill-tag">REST APIs</span>
+                  <span className="skill-tag">Python</span><span className="skill-tag">Backend Logic</span>
+                  <span className="skill-tag">LMS Management (Moodle)</span>
                 </div>
               </div>
               <div className="skills-category">
-                <h3>🤖 AI & Automation</h3>
+                <h3>● Ecosystems</h3>
                 <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">Prompt Engineering</span><span className="skill-tag">AI Agents</span>
-                  <span className="skill-tag">LLM APIs</span><span className="skill-tag">Cursor IDE</span>
+                  <span className="skill-tag">Power Platform (Power Apps & Automate)</span>
+                  <span className="skill-tag">Docker</span><span className="skill-tag">CI/CD</span>
                 </div>
               </div>
               <div className="skills-category">
-                <h3>☁️ Cloud & Ops</h3>
+                <h3>● Focus</h3>
                 <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">AWS (in progress)</span><span className="skill-tag">Docker</span>
-                  <span className="skill-tag">Linux</span><span className="skill-tag">CI/CD</span>
-                </div>
-              </div>
-              <div className="skills-category">
-                <h3>💼 Management & Vision</h3>
-                <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">LMS Platforms</span><span className="skill-tag">Process Optimization</span>
-                  <span className="skill-tag">Product Vision</span>
+                  <span className="skill-tag">Automatización de procesos de negocio</span>
+                  <span className="skill-tag">Optimización logística</span>
+                  <span className="skill-tag">Arquitectura escalable</span>
                 </div>
               </div>
             </div>
