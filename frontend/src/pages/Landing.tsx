@@ -154,7 +154,7 @@ export function Landing(){
         <div className="container">
           <h2 className="section-title fade-in">Proyectos Destacados</h2>
           <div className="projects-grid grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-            {projects.slice(0, 4).map((project) => (
+            {projects.map((project) => (
               <div key={project.title} className="fade-in">
                 <CardProyecto {...project} />
               </div>
