@@ -83,6 +83,12 @@ body, main, section { width:100%; max-width:100%; }
 .project-description{color:var(--text-dim);margin-bottom:20px;line-height:1.6}
 .tech-item{background:rgba(124,58,237,.2);color:var(--secondary);padding:4px 12px;border-radius:12px;font-size:.8rem;font-family:"JetBrains Mono",monospace}
 
+/* Projects Grid Compact */
+.projects-grid{grid-template-columns:repeat(4,1fr);gap:16px}
+.projects-grid > div{height:100%}
+.projects .section-title{font-size:2.5rem;margin-bottom:30px}
+.projects.section{padding:60px 0 40px}
+
 /* Contact */
 .contact{background:var(--gray)}
 .contact-item{background:var(--dark);padding:30px;border-radius:12px;border:1px solid var(--light-gray);transition:.3s;text-decoration:none;color:var(--text)}
