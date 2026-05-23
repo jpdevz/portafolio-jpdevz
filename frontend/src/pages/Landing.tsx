@@ -75,12 +75,11 @@ export function Landing(){
           <div className="hero-content">
             <h1 className="text-[2.75rem] md:text-[4rem] font-bold mb-5"
               style={{background:'var(--gradient)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
-              Business Solutions & Power Platform Expert
+              Building Intelligent Systems & High-Impact Digital Products
             </h1>
-            <div className="hero-subtitle">🚀 Arquitecto de Soluciones & Especialista en Automatización</div>
+            <div className="hero-subtitle">🚀 Full Stack Developer & AI Solutions Architect</div>
             <p className="hero-description text-[1.1rem] text-[var(--text-dim)] mb-10">
-              Combino la visión de negocio con la robustez del desarrollo Backend y la potencia de la IA para crear
-              productos digitales que no solo funcionan, sino que escalan y resuelven problemas reales.
+              Enfocado en diseñar, automatizar y escalar plataformas digitales que resuelven problemas operativos reales, transformando procesos críticos en ventajas competitivas.
             </p>
             <div className="flex gap-4 flex-wrap">
               <a href="#projects" className="cta-primary px-5 py-3 rounded-md font-semibold"
@@ -115,7 +114,7 @@ export function Landing(){
           <h2 className="section-title">Sobre mí</h2>
           <div className="grid md:grid-cols-2 gap-20 items-start">
             <div className="about-text fade-in text-[1.1rem] text-[var(--text-dim)] leading-8">
-              <p>Como <span className="highlight">Business Solutions Architect</span>, me especializo en transformar procesos operativos en arquitecturas digitales de alto rendimiento. Mi enfoque es la eficiencia radical: utilizo Power Platform y SQL para automatizar la logística y la educación, reduciendo costos y eliminando errores manuales.</p>
+              <p>Soy Desarrollador Full Stack y Arquitecto de Soluciones de IA. Mi trabajo combina la robustez del desarrollo backend en Python con la flexibilidad de la inteligencia artificial, flujos agénticos y arquitectura cloud. En lugar de entornos de prueba, mi experiencia se demuestra en producción a través de productos y emprendimientos tecnológicos propios y corporativos que aceleran el 'time-to-market' sin comprometer la calidad ni la seguridad.</p>
             </div>
 
             <div className="skills-section fade-in">

@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import os
 import tempfile
-from pdf_inspector import process_pdf
+import pdfplumber
 
 app = Flask(__name__)
 
@@ -62,11 +62,13 @@ def convert_pdf():
         file.save(filepath)
         
         try:
-            # Process the PDF using pdf_inspector
-            result = process_pdf(filepath)
-            
-            # Extract markdown content from PdfResult object
-            markdown_content = result.markdown
+            # Process the PDF using pdfplumber
+            markdown_content = ""
+            with pdfplumber.open(filepath) as pdf:
+                for page in pdf.pages:
+                    text = page.extract_text()
+                    if text:
+                        markdown_content += text + "\n\n"
             
             # Clean up the temporary file
             os.remove(filepath)
