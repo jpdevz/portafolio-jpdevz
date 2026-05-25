@@ -121,7 +121,7 @@ export function Landing(){
               <div className="mt-6 space-y-2">
                 <p className="font-semibold text-white">Certificaciones Clave:</p>
                 <ul className="list-disc list-inside text-sm space-y-1 opacity-80">
-                  <li>Programa Oracle Next Education F2 T6 Back-end</li>
+                  <li>Desarrollo de aplicaciones full stack python trainee V2.0</li>
                   <li>Especialidad en Arquitectura Cloud</li>
                   <li>Inmersión IA + Google Gemini</li>
                 </ul>

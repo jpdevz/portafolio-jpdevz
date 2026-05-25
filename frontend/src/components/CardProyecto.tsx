@@ -4,9 +4,10 @@ type Props = {
   tags?: string[]
   repoUrl?: string
   demoUrl?: string
+  isPublished?: boolean
 }
 
-export function CardProyecto({ title, description, tags = [], repoUrl, demoUrl }: Props) {
+export function CardProyecto({ title, description, tags = [], repoUrl, demoUrl, isPublished }: Props) {
   return (
     <article className="h-full flex flex-col rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-3 hover:bg-white/10 transition cursor-default">
       <h3 className="text-base font-semibold text-white leading-tight">{title}</h3>
@@ -29,8 +30,8 @@ export function CardProyecto({ title, description, tags = [], repoUrl, demoUrl }
           </span>
         )}
         {demoUrl ? (
-          <a className="text-xs font-semibold px-3 py-1.5 rounded-md bg-[var(--primary)] text-dark hover:opacity-90 transition" href={demoUrl} target="_blank">
-            Demo / Caso de Estudio
+          <a className="text-xs font-semibold px-3 py-1.5 rounded-md bg-white/5 border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-dark transition" href={demoUrl} target="_blank">
+            {isPublished ? 'Visitar Sitio' : 'Demo / Caso de Estudio'}
           </a>
         ) : (
           <span className="text-xs font-semibold px-3 py-1.5 rounded-md bg-white/5 border border-white/10 text-neutral-500 cursor-not-allowed">
