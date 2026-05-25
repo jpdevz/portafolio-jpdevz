@@ -70,8 +70,8 @@ export function Landing(){
       <AnimatedBackground />
 
       {/* Hero */}
-      <section id="home" className="hero py-12 md:py-20">
-          <div className="container grid md:grid-cols-2 gap-10 items-center justify-items-center min-h-[60vh] lg:min-h-[80vh]">
+      <section id="home" className="hero py-8 md:py-12">
+          <div className="container grid md:grid-cols-2 gap-10 items-center justify-items-center min-h-[50vh] lg:min-h-[70vh]">
           <div className="hero-content">
             <h1 className="text-[2.75rem] md:text-[4rem] font-bold mb-5"
               style={{background:'var(--gradient)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
@@ -111,7 +111,7 @@ export function Landing(){
       </section>
 
       {/* About */}
-      <section id="about" className="section !pt-10 md:!pt-20">
+      <section id="about" className="section !pt-6 md:!pt-12">
         <div className="container">
           <h2 className="section-title">Sobre mí</h2>
           <div className="grid md:grid-cols-2 gap-20 items-start">
@@ -165,9 +165,9 @@ export function Landing(){
       <section id="projects" className="section projects">
         <div className="container">
           <h2 className="section-title fade-in">Proyectos Destacados</h2>
-          <div className="projects-grid grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="projects-grid flex flex-wrap justify-center gap-10">
             {projects.map((project) => (
-              <div key={project.title} className="fade-in">
+              <div key={project.title} className="fade-in w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] max-w-[350px]">
                 <CardProyecto {...project} />
               </div>
             ))}
