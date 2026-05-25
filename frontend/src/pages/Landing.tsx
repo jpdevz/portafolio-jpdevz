@@ -116,7 +116,9 @@ export function Landing(){
           <h2 className="section-title">Sobre mí</h2>
           <div className="grid md:grid-cols-2 gap-20 items-start">
             <div className="about-text fade-in text-[1.1rem] text-[var(--text-dim)] leading-8">
-              <p>Soy Desarrollador Full Stack y Arquitecto de Soluciones de IA. Mi trabajo combina la robustez del desarrollo backend en Python con la flexibilidad de la inteligencia artificial, flujos agénticos y arquitectura cloud. En lugar de entornos de prueba, mi experiencia se demuestra en producción a través de productos y emprendimientos tecnológicos propios y corporativos que aceleran el 'time-to-market' sin comprometer la calidad ni la seguridad.</p>
+              <p>Ingeniero en Control de Gestión de profesión, fusiono mi sólida base en optimización de procesos, analítica y visión de negocio con el desarrollo de software Full Stack y la Arquitectura de IA.</p>
+              <p className="mt-4">Mi enfoque no es solo escribir código, sino diseñar soluciones tecnológicas estratégicas que resuelvan problemas operativos críticos. Cuento con una sólida trayectoria en entornos de producción liderando arquitecturas cloud, integraciones complejas de APIs (LMS, Moodle, Jitsi), automatización de flujos agénticos con IA y sistemas multiempresa de alta disponibilidad.</p>
+              <p className="mt-4">Mi objetivo es claro: transformar la lógica de negocio en software escalable, eficiente y orientado a resultados de alto impacto.</p>
 
               <div className="mt-6 space-y-2">
                 <p className="font-semibold text-white">Certificaciones Clave:</p>
