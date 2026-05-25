@@ -119,15 +119,6 @@ export function Landing(){
               <p>Ingeniero en Control de Gestión de profesión, fusiono mi sólida base en optimización de procesos, analítica y visión de negocio con el desarrollo de software Full Stack y la Arquitectura de IA.</p>
               <p className="mt-4">Mi enfoque no es solo escribir código, sino diseñar soluciones tecnológicas estratégicas que resuelvan problemas operativos críticos. Cuento con una sólida trayectoria en entornos de producción liderando arquitecturas cloud, integraciones complejas de APIs (LMS, Moodle, Jitsi), automatización de flujos agénticos con IA y sistemas multiempresa de alta disponibilidad.</p>
               <p className="mt-4">Mi objetivo es claro: transformar la lógica de negocio en software escalable, eficiente y orientado a resultados de alto impacto.</p>
-
-              <div className="mt-6 space-y-2">
-                <p className="font-semibold text-white">Certificaciones Clave:</p>
-                <ul className="list-disc list-inside text-sm space-y-1 opacity-80">
-                  <li>Desarrollo de aplicaciones full stack python trainee V2.0</li>
-                  <li>Especialidad en Arquitectura Cloud</li>
-                  <li>Inmersión IA + Google Gemini</li>
-                </ul>
-              </div>
             </div>
 
             <div className="skills-section fade-in">
@@ -157,8 +148,15 @@ export function Landing(){
                   <span className="skill-tag">Git</span>
                 </div>
               </div>
+              <div className="mt-6 pt-4 border-t border-white/10">
+                <p className="text-xs font-semibold text-white/60 mb-3 uppercase tracking-wider">Certificaciones:</p>
+                <ul className="text-xs text-[var(--text-dim)] space-y-1.5 list-disc list-inside opacity-80">
+                  <li>Desarrollo de aplicaciones full stack python trainee V2.0</li>
+                  <li>Especialidad en Arquitectura Cloud</li>
+                  <li>Inmersión IA + Google Gemini</li>
+                </ul>
+              </div>
             </div>
-
           </div>
         </div>
       </section>
