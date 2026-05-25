@@ -18,9 +18,25 @@ export function CardProyecto({ title, description, tags = [], repoUrl, demoUrl }
           ))}
         </ul>
       )}
-      <div className="flex gap-2 mt-2">
-        {repoUrl && <a className="text-xs font-medium text-[var(--primary)] hover:underline" href={repoUrl} target="_blank">Repo</a>}
-        {demoUrl && <a className="text-xs font-medium text-[var(--primary)] hover:underline" href={demoUrl} target="_blank">Visitar</a>}
+      <div className="flex gap-3 mt-4">
+        {repoUrl ? (
+          <a className="text-xs font-semibold px-3 py-1.5 rounded-md bg-white/10 border border-white/20 text-white hover:bg-white/20 transition" href={repoUrl} target="_blank">
+            Código en GitHub
+          </a>
+        ) : (
+          <span className="text-xs font-semibold px-3 py-1.5 rounded-md bg-white/5 border border-white/10 text-neutral-500 cursor-not-allowed">
+            Privado / No disponible
+          </span>
+        )}
+        {demoUrl ? (
+          <a className="text-xs font-semibold px-3 py-1.5 rounded-md bg-[var(--primary)] text-dark hover:opacity-90 transition" href={demoUrl} target="_blank">
+            Demo / Caso de Estudio
+          </a>
+        ) : (
+          <span className="text-xs font-semibold px-3 py-1.5 rounded-md bg-white/5 border border-white/10 text-neutral-500 cursor-not-allowed">
+            No disponible
+          </span>
+        )}
       </div>
     </article>
   )

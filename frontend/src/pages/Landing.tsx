@@ -75,11 +75,13 @@ export function Landing(){
           <div className="hero-content">
             <h1 className="text-[2.75rem] md:text-[4rem] font-bold mb-5"
               style={{background:'var(--gradient)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
-              Building Intelligent Systems & High-Impact Digital Products
+              Full Stack Developer & AI Architect
             </h1>
-            <div className="hero-subtitle">🚀 Full Stack Developer & AI Solutions Architect</div>
+            <div className="hero-subtitle text-xl md:text-2xl font-medium text-white mb-4">
+              Especializado en Backend, Automatización y Soluciones de IA
+            </div>
             <p className="hero-description text-[1.1rem] text-[var(--text-dim)] mb-10">
-              Enfocado en diseñar, automatizar y escalar plataformas digitales que resuelven problemas operativos reales, transformando procesos críticos en ventajas competitivas.
+              Especializado en desarrollo backend robusto, automatización de procesos críticos y diseño de flujos agénticos con IA. Traduzco lógicas complejas en sistemas escalables y eficientes.
             </p>
             <div className="flex gap-4 flex-wrap">
               <a href="#projects" className="cta-primary px-5 py-3 rounded-md font-semibold"
@@ -99,9 +101,9 @@ export function Landing(){
               <div className="code-content">
                 <span className="code-line"><span className="keyword">class</span> <span className="function">BusinessSolutionsArchitect</span>:</span>
                 <span className="code-line">  <span className="keyword">def</span> <span className="function">__init__</span>(<span className="keyword">self</span>):</span>
-                <span className="code-line">    <span className="keyword">self</span>.skills = [<span className="string">"PowerPlatform"</span>, <span className="string">"SQL"</span>, <span className="string">"Python"</span>, <span className="string">"AI-Automation"</span>]</span>
-                <span className="code-line">    <span className="keyword">self</span>.passion = <span className="string">"Business Efficiency"</span></span>
-                <span className="code-line">  <span className="comment"># Optimizando operaciones con tecnología 🎯</span></span>
+                <span className="code-line">    <span className="keyword">self</span>.skills = [<span className="string">"Python"</span>, <span className="string">"FastAPI"</span>, <span className="string">"Cloud"</span>, <span className="string">"AI-Agents"</span>]</span>
+                <span className="code-line">    <span className="keyword">self</span>.passion = <span className="string">"Scalable Systems"</span></span>
+                <span className="code-line">  <span className="comment"># Transformando complejidad en eficiencia 🎯</span></span>
               </div>
             </div>
           </div>
@@ -115,31 +117,42 @@ export function Landing(){
           <div className="grid md:grid-cols-2 gap-20 items-start">
             <div className="about-text fade-in text-[1.1rem] text-[var(--text-dim)] leading-8">
               <p>Soy Desarrollador Full Stack y Arquitecto de Soluciones de IA. Mi trabajo combina la robustez del desarrollo backend en Python con la flexibilidad de la inteligencia artificial, flujos agénticos y arquitectura cloud. En lugar de entornos de prueba, mi experiencia se demuestra en producción a través de productos y emprendimientos tecnológicos propios y corporativos que aceleran el 'time-to-market' sin comprometer la calidad ni la seguridad.</p>
+
+              <div className="mt-6 space-y-2">
+                <p className="font-semibold text-white">Certificaciones Clave:</p>
+                <ul className="list-disc list-inside text-sm space-y-1 opacity-80">
+                  <li>Programa Oracle Next Education F2 T6 Back-end</li>
+                  <li>Especialidad en Arquitectura Cloud</li>
+                  <li>Inmersión IA + Google Gemini</li>
+                </ul>
+              </div>
             </div>
 
             <div className="skills-section fade-in">
               <div className="skills-category">
-                <h3>● Data & Core Logic</h3>
+                <h3>● Backend & IA</h3>
                 <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">SQL (PostgreSQL/SQL Server)</span>
-                  <span className="skill-tag">Dataverse</span>
-                  <span className="skill-tag">Python</span>
+                  <span className="skill-tag">Python (Django/FastAPI)</span>
+                  <span className="skill-tag">Java (Spring Boot)</span>
+                  <span className="skill-tag">LLMs & RAG</span>
+                  <span className="skill-tag">Flujos Agénticos</span>
                 </div>
               </div>
               <div className="skills-category">
-                <h3>● Power Platform</h3>
+                <h3>● Cloud & Data</h3>
                 <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">Power Apps (Canvas/Model-Driven)</span>
-                  <span className="skill-tag">Power Automate</span>
-                  <span className="skill-tag">AI Builder</span>
+                  <span className="skill-tag">AWS</span>
+                  <span className="skill-tag">PostgreSQL / MySQL</span>
+                  <span className="skill-tag">Arquitectura Cloud</span>
                 </div>
               </div>
               <div className="skills-category">
-                <h3>● Management & Vision</h3>
+                <h3>● Frontend & Complementos</h3>
                 <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">LMS Platforms</span>
-                  <span className="skill-tag">Process Optimization</span>
-                  <span className="skill-tag">ROI Analysis</span>
+                  <span className="skill-tag">JavaScript</span>
+                  <span className="skill-tag">React</span>
+                  <span className="skill-tag">Tailwind CSS</span>
+                  <span className="skill-tag">Git</span>
                 </div>
               </div>
             </div>
@@ -185,6 +198,12 @@ export function Landing(){
                 <div className="text-[2rem]" style={{color:'var(--primary)'}}>🔧</div>
                 <div className="font-semibold mb-1">GitHub</div>
                 <div className="text-[var(--text-dim)] text-sm">github.com/jpdevz</div>
+              </a>
+            </div>
+            <div className="flex justify-center fade-in">
+              <a href="/CV_JP_Pizarro_md.md" download className="cta-primary px-8 py-3 rounded-md font-semibold"
+                 style={{background:'var(--gradient)', color:'var(--dark)'}}>
+                Descargar CV
               </a>
             </div>
           </div>
