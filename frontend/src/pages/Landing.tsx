@@ -168,32 +168,27 @@ export function Landing(){
       {/* Contact */}
       <section id="contact" className="section contact">
         <div className="container">
-          <h2 className="section-title fade-in">Conectemos</h2>
+          <h2 className="section-title fade-in">¿Hablamos de tu proyecto?</h2>
           <div className="max-w-[800px] mx-auto text-center">
             <p className="contact-description fade-in text-[1.2rem] text-[var(--text-dim)] mb-12">
-              ¿Tienes un proceso operativo que necesite automatización o buscas arquitectura de soluciones eficientes? Hablemos...
+              No necesitas saber qué tecnología utilizar.<br />
+              Solo cuéntame qué problema quieres resolver.
             </p>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 mb-12">
               <a className="contact-item fade-in" href="mailto:jpizarro@jpdevz.com">
                 <div className="text-[2rem]" style={{color:'var(--primary)'}}>📧</div>
-                <div className="font-semibold mb-1">Email</div>
-                <div className="text-[var(--text-dim)] text-sm">jpizarro@jpdevz.com</div>
+                <div className="font-semibold mb-1">Correo</div>
+                <div className="text-[var(--text-dim)] text-sm">La mejor opción para consultas o nuevos proyectos.</div>
               </a>
               <a className="contact-item fade-in" href="https://linkedin.com/in/jpdevz" target="_blank">
                 <div className="text-[2rem]" style={{color:'var(--primary)'}}>💼</div>
                 <div className="font-semibold mb-1">LinkedIn</div>
-                <div className="text-[var(--text-dim)] text-sm">linkedin.com/in/jpdevz</div>
+                <div className="text-[var(--text-dim)] text-sm">Conoce mi experiencia profesional y conectemos.</div>
               </a>
               <a className="contact-item fade-in" href="https://github.com/jpdevz" target="_blank">
-                <div className="text-[2rem]" style={{color:'var(--primary)'}}>🔧</div>
+                <div className="text-[2rem]" style={{color:'var(--primary)'}}>💻</div>
                 <div className="font-semibold mb-1">GitHub</div>
-                <div className="text-[var(--text-dim)] text-sm">github.com/jpdevz</div>
-              </a>
-            </div>
-            <div className="flex justify-center fade-in">
-              <a href="/CV_JP_Pizarro_md.md" download className="cta-primary px-8 py-3 rounded-md font-semibold"
-                 style={{background:'var(--gradient)', color:'var(--dark)'}}>
-                Descargar CV
+                <div className="text-[var(--text-dim)] text-sm">Explora algunos de los proyectos y tecnologías con las que trabajo.</div>
               </a>
             </div>
           </div>
