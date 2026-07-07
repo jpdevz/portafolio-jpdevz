@@ -75,19 +75,19 @@ export function Landing(){
           <div className="hero-content">
             <h1 className="text-[2.75rem] md:text-[4rem] font-bold mb-5"
               style={{background:'var(--gradient)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
-              Full Stack Developer & AI Architect
+              Transformo procesos complejos en soluciones digitales simples.
             </h1>
             <div className="hero-subtitle text-xl md:text-2xl font-medium text-white mb-4">
-              Especializado en Backend, Automatización y Soluciones de IA
+              Cada proceso puede mejorar. Solo necesita el sistema correcto.
             </div>
             <p className="hero-description text-[1.1rem] text-[var(--text-dim)] mb-10">
-              Especializado en desarrollo backend robusto, automatización de procesos críticos y diseño de flujos agénticos con IA. Traduzco lógicas complejas en sistemas escalables y eficientes.
+              Ayudo a empresas a reducir trabajo manual, conectar sus procesos y construir herramientas digitales adaptadas a la forma en que realmente trabajan. Aplicaciones web, dashboards, automatizaciones e inteligencia artificial cuando aportan valor.
             </p>
             <div className="flex gap-4 flex-wrap">
               <a href="#projects" className="cta-primary px-5 py-3 rounded-md font-semibold"
-                 style={{background:'var(--gradient)', color:'var(--dark)'}}>Ver Proyectos</a>
+                 style={{background:'var(--gradient)', color:'var(--dark)'}}>Ver casos reales</a>
               <a href="#contact" className="cta-secondary px-5 py-3 rounded-md font-semibold border-2"
-                 style={{borderColor:'var(--primary)'}}>Contactar</a>
+                 style={{borderColor:'var(--primary)'}}>Hablemos</a>
             </div>
           </div>
 
@@ -99,11 +99,18 @@ export function Landing(){
                 <div className="control green"></div>
               </div>
               <div className="code-content">
-                <span className="code-line"><span className="keyword">class</span> <span className="function">BusinessSolutionsArchitect</span>:</span>
+                <span className="code-line"><span className="keyword">class</span> <span className="function">BusinessProblem</span>:</span>
+                <span className="code-line"></span>
                 <span className="code-line">  <span className="keyword">def</span> <span className="function">__init__</span>(<span className="keyword">self</span>):</span>
-                <span className="code-line">    <span className="keyword">self</span>.skills = [<span className="string">"Python"</span>, <span className="string">"FastAPI"</span>, <span className="string">"Cloud"</span>, <span className="string">"AI-Agents"</span>]</span>
-                <span className="code-line">    <span className="keyword">self</span>.passion = <span className="string">"Scalable Systems"</span></span>
-                <span className="code-line">  <span className="comment"># Transformando complejidad en eficiencia 🎯</span></span>
+                <span className="code-line">    <span className="keyword">self</span>.process = <span className="string">"Manual"</span></span>
+                <span className="code-line">    <span className="keyword">self</span>.solution = <span className="string">"Automated"</span></span>
+                <span className="code-line"></span>
+                <span className="code-line">  <span className="keyword">def</span> <span className="function">outcome</span>(<span className="keyword">self</span>):</span>
+                <span className="code-line">    <span className="keyword">return</span> [</span>
+                <span className="code-line">      <span className="string">"Less manual work"</span>,</span>
+                <span className="code-line">      <span className="string">"Better visibility"</span>,</span>
+                <span className="code-line">      <span className="string">"Scalable operations"</span></span>
+                <span className="code-line">    ]</span>
               </div>
             </div>
           </div>
@@ -113,48 +120,31 @@ export function Landing(){
       {/* About */}
       <section id="about" className="section !pt-6 md:!pt-12">
         <div className="container">
-          <h2 className="section-title">Sobre mí</h2>
+          <h2 className="section-title">Cómo trabajo</h2>
           <div className="grid md:grid-cols-2 gap-20 items-start">
             <div className="about-text fade-in text-[1.1rem] text-[var(--text-dim)] leading-8">
-              <p>Ingeniero en Control de Gestión de profesión, fusiono mi sólida base en optimización de procesos, analítica y visión de negocio con el desarrollo de software Full Stack y la Arquitectura de IA.</p>
-              <p className="mt-4">Mi enfoque no es solo escribir código, sino diseñar soluciones tecnológicas estratégicas que resuelvan problemas operativos críticos. Cuento con una sólida trayectoria en entornos de producción liderando arquitecturas cloud, integraciones complejas de APIs (LMS, Moodle, Jitsi), automatización de flujos agénticos con IA y sistemas multiempresa de alta disponibilidad.</p>
-              <p className="mt-4">Mi objetivo es claro: transformar la lógica de negocio en software escalable, eficiente y orientado a resultados de alto impacto.</p>
+              <p>No creo que la tecnología sea el punto de partida para resolver un problema. Primero entiendo cómo funciona un negocio, dónde aparecen las tareas repetitivas, la información dispersa o los procesos que consumen tiempo. Después diseño la solución adecuada.</p>
+              <p className="mt-4">Mi trabajo consiste en transformar esos desafíos en aplicaciones web, sistemas internos, automatizaciones e integraciones que simplifican el trabajo diario y permiten que las empresas operen de forma más eficiente.</p>
+              <p className="mt-4">Mi experiencia en operaciones, gestión, educación y desarrollo de software me permite conectar dos mundos: comprender las necesidades del negocio y convertirlas en soluciones digitales que realmente se utilizan y generan valor.</p>
+              <p className="mt-4">No me defino por una tecnología en particular. Cada proyecto requiere herramientas distintas. A veces será una aplicación web; otras, una automatización, un dashboard, una integración entre plataformas o inteligencia artificial. Lo importante no es la tecnología elegida, sino el impacto que genera.</p>
             </div>
 
             <div className="skills-section fade-in">
               <div className="skills-category">
-                <h3>● Backend & IA</h3>
-                <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">Python (Django/FastAPI)</span>
-                  <span className="skill-tag">Java (Spring Boot)</span>
-                  <span className="skill-tag">LLMs & RAG</span>
-                  <span className="skill-tag">Flujos Agénticos</span>
-                </div>
-              </div>
-              <div className="skills-category">
-                <h3>● Cloud & Data</h3>
-                <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">AWS</span>
-                  <span className="skill-tag">PostgreSQL / MySQL</span>
-                  <span className="skill-tag">Arquitectura Cloud</span>
-                </div>
-              </div>
-              <div className="skills-category">
-                <h3>● Frontend & Complementos</h3>
-                <div className="skills-list flex flex-wrap gap-2">
-                  <span className="skill-tag">JavaScript</span>
-                  <span className="skill-tag">React</span>
-                  <span className="skill-tag">Tailwind CSS</span>
-                  <span className="skill-tag">Git</span>
-                </div>
+                <h3>Lo que construyo</h3>
+                <ul className="text-[1.05rem] text-[var(--text-dim)] space-y-2 mt-3">
+                  <li>✔ Aplicaciones web a medida</li>
+                  <li>✔ Plataformas internas</li>
+                  <li>✔ Sistemas de gestión</li>
+                  <li>✔ Automatización de procesos</li>
+                  <li>✔ Integraciones entre plataformas</li>
+                  <li>✔ Dashboards y analítica</li>
+                  <li>✔ Soluciones con IA</li>
+                </ul>
               </div>
               <div className="mt-6 pt-4 border-t border-white/10">
-                <p className="text-xs font-semibold text-white/60 mb-3 uppercase tracking-wider">Certificaciones:</p>
-                <ul className="text-xs text-[var(--text-dim)] space-y-1.5 list-disc list-inside opacity-80">
-                  <li>Desarrollo de aplicaciones full stack python trainee V2.0</li>
-                  <li>Especialidad en Arquitectura Cloud</li>
-                  <li>Inmersión IA + Google Gemini</li>
-                </ul>
+                <p className="text-xs font-semibold text-white/60 mb-3 uppercase tracking-wider">Herramientas frecuentes</p>
+                <p className="text-xs text-[var(--text-dim)] opacity-80">Python · React · Supabase · PostgreSQL · Google Apps Script · APIs · Vercel · AWS</p>
               </div>
             </div>
           </div>
@@ -164,10 +154,10 @@ export function Landing(){
       {/* Projects */}
       <section id="projects" className="section projects">
         <div className="container">
-          <h2 className="section-title fade-in">Proyectos Destacados</h2>
+          <h2 className="section-title fade-in">Casos reales</h2>
           <div className="projects-grid flex flex-wrap justify-center gap-10">
-            {projects.map((project) => (
-              <div key={project.title} className="fade-in w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] max-w-[350px]">
+            {projects.map((project, index) => (
+              <div key={index} className="fade-in w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] max-w-[350px]">
                 <CardProyecto {...project} />
               </div>
             ))}
