@@ -5,8 +5,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import { RootLayout } from './layouts/RootLayout'
 import { Landing } from './pages/Landing'
-import { Proyectos } from './pages/Proyectos'
-import { Contacto } from './pages/Contacto'
 
 const router = createBrowserRouter([
   {
@@ -14,8 +12,6 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <Landing /> },
-      { path: 'proyectos', element: <Proyectos /> },
-      { path: 'contacto', element: <Contacto /> },
     ],
   },
 ])
