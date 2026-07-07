@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jpdevz.com/sitemap.xml
+Sitemap: https://www.jpdevz.com/sitemap.xml
