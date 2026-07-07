@@ -73,7 +73,7 @@ export function Landing(){
       <section id="home" className="hero py-8 md:py-12">
           <div className="container grid md:grid-cols-2 gap-10 items-center justify-items-center min-h-[50vh] lg:min-h-[70vh]">
           <div className="hero-content">
-            <h1 className="text-[2.75rem] md:text-[4rem] font-bold mb-5"
+            <h1 className="text-[2.75rem] md:text-[4rem] font-bold leading-tight mb-5"
               style={{background:'var(--gradient)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
               Transformo procesos complejos en soluciones digitales simples.
             </h1>

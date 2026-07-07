@@ -14,9 +14,9 @@ export function Navbar(){
             <div className="logo">JPDEVZ</div>
                 <ul className="nav-links">
                 <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Acerca</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#about">Cómo trabajo</a></li>
+                <li><a href="#projects">Casos reales</a></li>
+                <li><a href="#contact">Hablemos</a></li>
             </ul>
         </div>
     </nav>
