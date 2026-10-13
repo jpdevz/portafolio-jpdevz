@@ -1,55 +1,57 @@
-export const projects = [
+export type Project = {
+  title: string
+  subtitle?: string
+  problem: string
+  solution: string
+  results: string[]
+  flow: [string, string, string]
+  tags: string[]
+  demoUrl?: string
+  demoLabel?: string
+}
+
+// Casos destacados: los mismos que figuran en el perfil de Upwork.
+export const projects: Project[] = [
   {
-    title: 'Plataforma de Control de Asistencia',
-    subtitle: 'Integración Moodle + Jitsi',
-    problem: 'La asistencia se registraba manualmente y era difícil consolidar la información.',
-    solution: 'Diseñé una plataforma integrada con Moodle y Jitsi que automatiza el registro de asistencia.',
-    results: ['Menos trabajo manual', 'Mayor trazabilidad', 'Información centralizada'],
-    tags: ['Python', 'Django', 'APIs'],
-    repoUrl: '',
-    demoUrl: '',
-    isPublished: false
+    title: 'FotoGasto',
+    subtitle: 'Registro de gastos con IA',
+    problem: 'Registrar boletas después de comprar era tedioso, así que los gastos terminaban sin registrarse o mal categorizados.',
+    solution: 'Un bot de Telegram recibe la foto de la boleta, la IA extrae y categoriza los datos, y un dashboard permite consultar y exportar.',
+    results: ['Registro en segundos, en el momento de la compra', 'Datos estructurados listos para consultar y exportar', 'Proveedor de IA intercambiable'],
+    flow: ['Foto en Telegram', 'IA extrae y categoriza', 'Dashboard y exportación'],
+    tags: ['Supabase', 'Next.js', 'IA'],
   },
   {
-    title: 'Sistema de Asistencia Multisede',
-    problem: 'Empresas con múltiples sedes no podían verificar de forma confiable la asistencia real de su personal, exponiéndose a fraudes de ubicación.',
-    solution: 'Diseñé una aplicación con geofencing, validación biométrica y detección de VPN para garantizar registros de asistencia confiables en cada sede.',
-    results: ['Registros confiables', 'Menor fraude de ubicación', 'Control multisede'],
-    tags: ['Python', 'Django / FastAPI', 'Geofencing'],
-    repoUrl: '',
+    title: 'Nova Attendance',
+    subtitle: 'Asistencia multiempresa georreferenciada',
+    problem: 'Las empresas con varias sedes no podían confiar en la asistencia real de su personal ni aislar los datos de cada cliente.',
+    solution: 'Plataforma multi-tenant con validación de ubicación, foto de respaldo y registros inmutables, con aislamiento de datos a nivel de base de datos.',
+    results: ['Marcaciones verificables con foto y ubicación', 'Datos de cada empresa aislados entre sí', 'MVP funcional con demo en línea'],
+    flow: ['Marcación con foto y ubicación', 'Validación de geocerca', 'Registro inmutable por empresa'],
+    tags: ['Next.js', 'TypeScript', 'Supabase'],
     demoUrl: 'https://nova-dialing.vercel.app/',
-    isPublished: true
+    demoLabel: 'Ver demo',
   },
   {
-    title: 'Plataforma de Gestión de Miembros',
-    problem: 'Buscar y filtrar miembros en un catálogo grande era lento y afectaba el rendimiento del sitio.',
-    solution: 'Implementé estructuras de datos optimizadas en el backend para permitir búsquedas masivas e instantáneas.',
-    results: ['Búsquedas instantáneas', 'Mejor rendimiento del sitio', 'Catálogo escalable'],
-    tags: ['PHP', 'WordPress Core', 'Optimización de Datos'],
-    repoUrl: '',
-    demoUrl: '',
-    isPublished: false
+    title: 'Asistencia Moodle + Jitsi',
+    subtitle: 'Integración para una institución educativa',
+    problem: 'La asistencia de las clases en vivo se consolidaba a mano, con tiempo operativo y poca trazabilidad.',
+    solution: 'Integración que registra la asistencia de las sesiones de Jitsi dentro de Moodle y la consolida en reportes de Looker Studio.',
+    results: ['Menos procesamiento manual', 'Información centralizada y trazable', 'En uso con una institución que apoyo desde 2022'],
+    flow: ['Clase en vivo en Jitsi', 'Asistencia registrada en Moodle', 'Reporte en Looker Studio'],
+    tags: ['Moodle', 'Apps Script', 'APIs'],
+  },
+]
+
+export const otherWork = [
+  {
+    name: 'NexCommit',
+    description: 'Agencia de soluciones digitales que cofundé: sitios, automatización y plataformas a medida para pymes.',
+    url: 'https://nexcommit.com',
   },
   {
-    title: 'Agencia de Soluciones Digitales',
-    subtitle: 'NexCommit',
-    problem: 'Empresas y startups necesitaban soluciones tecnológicas a medida sin un equipo interno de desarrollo.',
-    solution: 'Cofundé una agencia dedicada al diseño e implementación de plataformas, automatizaciones e inteligencia artificial para empresas.',
-    results: ['Productos digitales a medida', 'Entrega ágil de soluciones', 'Arquitecturas escalables'],
-    tags: ['Full Stack', 'Cloud', 'IA'],
-    repoUrl: '',
-    demoUrl: 'https://nexcommit.com',
-    isPublished: true
+    name: 'Nomad Lexis',
+    description: 'Infraestructura y automatización de inscripción para un centro de idiomas.',
+    url: 'https://nomadlexis.com',
   },
-  {
-    title: 'Plataforma Educativa con Automatización',
-    subtitle: 'Nomad Lexis',
-    problem: 'El centro de idiomas gestionaba inscripciones y usuarios manualmente, limitando su capacidad de crecer.',
-    solution: 'Diseñé y desplegué la infraestructura digital completa, automatizando la inscripción y gestión de usuarios.',
-    results: ['Inscripción automatizada', 'Plataforma escalable', 'Menor carga operativa'],
-    tags: ['DevOps', 'Cloud', 'LMS'],
-    repoUrl: '',
-    demoUrl: 'https://nomadlexis.com',
-    isPublished: true
-  }
 ]

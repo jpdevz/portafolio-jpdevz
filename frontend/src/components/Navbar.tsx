@@ -12,12 +12,14 @@ export function Navbar(){
     <nav id="navbar" className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="w-full max-w-[1200px] mx-auto px-5 flex items-center justify-between">
             <div className="logo">JPDEVZ</div>
-                <ul className="nav-links">
+            <ul className="nav-links">
                 <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Cómo trabajo</a></li>
                 <li><a href="#projects">Casos reales</a></li>
+                <li><a href="#about">Cómo trabajo</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
                 <li><a href="#contact">Hablemos</a></li>
             </ul>
+            <a href="#contact" className="nav-cta">Hablemos</a>
         </div>
     </nav>
   )
