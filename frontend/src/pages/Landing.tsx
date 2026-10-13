@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { AnimatedBackground } from "../components/AnimatedBackground"
 import { CardProyecto } from "../components/CardProyecto"
 import { projects, otherWork } from "../data/projects"
-import { trayectoria, formacion } from "../data/trayectoria"
+import { resumen } from "../data/trayectoria"
 
 export function Landing(){
   useEffect(() => {
@@ -133,31 +133,22 @@ export function Landing(){
         </div>
       </section>
 
-      {/* Trayectoria */}
+      {/* Trayectoria (resumen) */}
       <section id="trayectoria" className="section projects">
         <div className="container">
           <h2 className="section-title fade-in">Trayectoria</h2>
-          <div className="grid md:grid-cols-[2fr_1fr] gap-12 max-w-[1000px] mx-auto">
-            <ol className="fade-in border-l border-white/10 space-y-8 ml-2">
-              {trayectoria.map(e => (
-                <li key={`${e.period}-${e.place}`} className="pl-6 relative">
-                  <span aria-hidden className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full" style={{background:'var(--primary)'}} />
-                  <p className="text-xs font-mono text-[var(--primary)]">{e.period}</p>
-                  <p className="font-semibold text-white">{e.role}</p>
-                  <p className="text-sm text-neutral-400">{e.place}</p>
-                  <p className="text-sm text-[var(--text-dim)] mt-1">{e.summary}</p>
-                </li>
+          <div className="max-w-[760px] mx-auto fade-in">
+            <dl className="space-y-5">
+              {resumen.map(r => (
+                <div key={r.label} className="grid sm:grid-cols-[110px_1fr] gap-1 sm:gap-6">
+                  <dt className="text-xs font-mono uppercase tracking-wider text-[var(--primary)] pt-1">{r.label}</dt>
+                  <dd className="text-[var(--text-dim)]">{r.text}</dd>
+                </div>
               ))}
-            </ol>
-            <aside className="fade-in">
-              <h3 className="font-semibold text-white mb-3">Formación</h3>
-              <ul className="space-y-2 text-sm text-[var(--text-dim)]">
-                {formacion.map(f => <li key={f}>{f}</li>)}
-              </ul>
-              <a href="https://linkedin.com/in/jpdevz" target="_blank" rel="noopener noreferrer"
-                 className="inline-block mt-6 px-5 py-3 rounded-md font-semibold text-sm"
-                 style={{background:'var(--gradient)', color:'var(--dark)'}}>Ver perfil en LinkedIn</a>
-            </aside>
+            </dl>
+            <a href="https://linkedin.com/in/jpdevz" target="_blank" rel="noopener noreferrer"
+               className="inline-block mt-8 px-5 py-3 rounded-md font-semibold text-sm"
+               style={{background:'var(--gradient)', color:'var(--dark)'}}>Ver trayectoria completa en LinkedIn</a>
           </div>
         </div>
       </section>
