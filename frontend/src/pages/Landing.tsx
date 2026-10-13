@@ -1,69 +1,35 @@
 import { useEffect } from "react"
 import { AnimatedBackground } from "../components/AnimatedBackground"
 import { CardProyecto } from "../components/CardProyecto"
-import { projects } from "../data/projects"
+import { projects, otherWork } from "../data/projects"
+import { trayectoria, formacion } from "../data/trayectoria"
 
 export function Landing(){
   useEffect(() => {
-  const handler = (e: Event) => {
-    const target = e.target as HTMLElement | null
-    const link = target?.closest('a[href^="#"]') as HTMLAnchorElement | null
-    if (link) {
-      const href = link.getAttribute('href')
-      if (href) {
-        e.preventDefault()
-        const el = document.querySelector(href)
-        el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const handler = (e: Event) => {
+      const target = e.target as HTMLElement | null
+      const link = target?.closest('a[href^="#"]') as HTMLAnchorElement | null
+      if (link) {
+        const href = link.getAttribute('href')
+        if (href) {
+          e.preventDefault()
+          document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
       }
     }
-  }
-  document.addEventListener('click', handler)
-  return () => document.removeEventListener('click', handler)
-}, [])
+    document.addEventListener('click', handler)
+    return () => document.removeEventListener('click', handler)
+  }, [])
 
   useEffect(() => {
-    // Intersection Observer para .fade-in
-    const opts = { threshold:0.1, rootMargin:'0px 0px -50px 0px' }
-    const io = new IntersectionObserver(entries=>{
-      entries.forEach(en=>{
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
         if (en.isIntersecting) en.target.classList.add('visible')
       })
-    },opts)
-    document.querySelectorAll('.fade-in').forEach(el=>io.observe(el))
-    return ()=>io.disconnect()
-  },[])
-
-  useEffect(() => {
-    // Cursor trail
-    const onMove = (e: MouseEvent) => {
-      const cursor = document.createElement('div')
-      cursor.style.cssText = `
-        position:fixed;top:${e.clientY}px;left:${e.clientX}px;width:6px;height:6px;
-        background:var(--primary);border-radius:50%;pointer-events:none;z-index:9999;opacity:.7;
-        animation: cursorFade .8s ease-out forwards;
-      `
-      document.body.appendChild(cursor)
-      setTimeout(()=>cursor.remove(),800)
-    }
-    const style = document.createElement('style')
-    style.textContent = `@keyframes cursorFade{to{opacity:0;transform:scale(0)}}`
-    document.head.appendChild(style)
-    document.addEventListener('mousemove', onMove)
-    return ()=>{ document.removeEventListener('mousemove', onMove); style.remove() }
-  },[])
-
-  useEffect(()=>{
-    // Typing en subtítulo
-    const el = document.querySelector('.hero-subtitle') as HTMLElement | null
-    if(!el) return
-    const text = el.textContent || ''
-    el.textContent = ''
-    let i = 0
-    const tick = () => {
-      if (i < text.length){ el.textContent += text.charAt(i++); setTimeout(tick, 80) }
-    }
-    setTimeout(tick, 1000)
-  },[])
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
+    document.querySelectorAll('.fade-in').forEach(el => io.observe(el))
+    return () => io.disconnect()
+  }, [])
 
   return (
     <>
@@ -71,15 +37,15 @@ export function Landing(){
 
       {/* Hero */}
       <section id="home" className="hero py-8 md:py-12">
-          <div className="container grid md:grid-cols-2 gap-10 items-center justify-items-center min-h-[50vh] lg:min-h-[70vh]">
+        <div className="container grid md:grid-cols-2 gap-10 items-center justify-items-center min-h-[50vh] lg:min-h-[70vh]">
           <div className="hero-content">
             <h1 className="text-[2.75rem] md:text-[4rem] font-bold leading-tight mb-5"
               style={{background:'var(--gradient)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
               Transformo procesos complejos en soluciones digitales simples.
             </h1>
-            <div className="hero-subtitle text-xl md:text-2xl font-medium text-white mb-4">
+            <p className="hero-subtitle text-xl md:text-2xl font-medium text-white mb-4">
               Cada proceso puede mejorar. Solo necesita el sistema correcto.
-            </div>
+            </p>
             <p className="hero-description text-[1.1rem] text-[var(--text-dim)] mb-10">
               Ayudo a empresas a reducir trabajo manual, conectar sus procesos y construir herramientas digitales adaptadas a la forma en que realmente trabajan. Aplicaciones web, dashboards, automatizaciones e inteligencia artificial cuando aportan valor.
             </p>
@@ -89,83 +55,114 @@ export function Landing(){
               <a href="#contact" className="cta-secondary px-5 py-3 rounded-md font-semibold border-2"
                  style={{borderColor:'var(--primary)'}}>Hablemos</a>
             </div>
+            <p className="mt-6 text-sm text-[var(--text-dim)]">
+              ¿Buscas mi perfil profesional?{' '}
+              <a href="#trayectoria" className="text-[var(--primary)] hover:underline">Trayectoria</a>
+              {' · '}
+              <a href="https://linkedin.com/in/jpdevz" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">LinkedIn</a>
+            </p>
           </div>
 
-          <div className="hero-visual">
+          <div className="hero-visual w-full max-w-[440px]">
             <div className="code-window">
               <div className="window-controls">
                 <div className="control red"></div>
                 <div className="control yellow"></div>
                 <div className="control green"></div>
               </div>
-              <div className="code-content">
-                <span className="code-line"><span className="keyword">class</span> <span className="function">BusinessProblem</span>:</span>
-                <span className="code-line"></span>
-                <span className="code-line">  <span className="keyword">def</span> <span className="function">__init__</span>(<span className="keyword">self</span>):</span>
-                <span className="code-line">    <span className="keyword">self</span>.process = <span className="string">"Manual"</span></span>
-                <span className="code-line">    <span className="keyword">self</span>.solution = <span className="string">"Automated"</span></span>
-                <span className="code-line"></span>
-                <span className="code-line">  <span className="keyword">def</span> <span className="function">outcome</span>(<span className="keyword">self</span>):</span>
-                <span className="code-line">    <span className="keyword">return</span> [</span>
-                <span className="code-line">      <span className="string">"Less manual work"</span>,</span>
-                <span className="code-line">      <span className="string">"Better visibility"</span>,</span>
-                <span className="code-line">      <span className="string">"Scalable operations"</span></span>
-                <span className="code-line">    ]</span>
+              <div className="code-content text-[.82rem]">
+                <span className="code-line"><span className="comment">// del problema al sistema</span></span>
+                <span className="code-line"><span className="keyword">boletas en papel</span> → <span className="string">bot + IA + dashboard</span></span>
+                <span className="code-line"><span className="keyword">asistencia manual</span> → <span className="string">registro verificable</span></span>
+                <span className="code-line"><span className="keyword">reportes a mano</span> → <span className="string">integración automática</span></span>
+                <span className="code-line"><span className="function">resultado</span>: menos trabajo manual,</span>
+                <span className="code-line">&nbsp;&nbsp;mejor visibilidad.</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="section !pt-6 md:!pt-12">
-        <div className="container">
-          <h2 className="section-title">Cómo trabajo</h2>
-          <div className="grid md:grid-cols-2 gap-20 items-start">
-            <div className="about-text fade-in text-[1.1rem] text-[var(--text-dim)] leading-8">
-              <p>No creo que la tecnología sea el punto de partida para resolver un problema. Primero entiendo cómo funciona un negocio, dónde aparecen las tareas repetitivas, la información dispersa o los procesos que consumen tiempo. Después diseño la solución adecuada.</p>
-              <p className="mt-4">Mi trabajo consiste en transformar esos desafíos en aplicaciones web, sistemas internos, automatizaciones e integraciones que simplifican el trabajo diario y permiten que las empresas operen de forma más eficiente.</p>
-              <p className="mt-4">Mi experiencia en operaciones, gestión, educación y desarrollo de software me permite conectar dos mundos: comprender las necesidades del negocio y convertirlas en soluciones digitales que realmente se utilizan y generan valor.</p>
-              <p className="mt-4">No me defino por una tecnología en particular. Cada proyecto requiere herramientas distintas. A veces será una aplicación web; otras, una automatización, un dashboard, una integración entre plataformas o inteligencia artificial. Lo importante no es la tecnología elegida, sino el impacto que genera.</p>
-            </div>
-
-            <div className="skills-section fade-in">
-              <div className="skills-category">
-                <h3>Lo que construyo</h3>
-                <ul className="text-[1.05rem] text-[var(--text-dim)] space-y-2 mt-3">
-                  <li>✔ Aplicaciones web a medida</li>
-                  <li>✔ Plataformas internas</li>
-                  <li>✔ Sistemas de gestión</li>
-                  <li>✔ Automatización de procesos</li>
-                  <li>✔ Integraciones entre plataformas</li>
-                  <li>✔ Dashboards y analítica</li>
-                  <li>✔ Soluciones con IA</li>
-                </ul>
-              </div>
-              <div className="mt-6 pt-4 border-t border-white/10">
-                <p className="text-xs font-semibold text-white/60 mb-3 uppercase tracking-wider">Herramientas frecuentes</p>
-                <p className="text-xs text-[var(--text-dim)] opacity-80">Python · React · Supabase · PostgreSQL · Google Apps Script · APIs · Vercel · AWS</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects */}
+      {/* Casos */}
       <section id="projects" className="section projects">
         <div className="container">
           <h2 className="section-title fade-in">Casos reales</h2>
-          <div className="projects-grid flex flex-wrap justify-center gap-10">
-            {projects.map((project, index) => (
-              <div key={index} className="fade-in w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] max-w-[350px]">
+          <div className="grid gap-6 md:grid-cols-3">
+            {projects.map(project => (
+              <div key={project.title} className="fade-in">
                 <CardProyecto {...project} />
               </div>
+            ))}
+          </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-2 max-w-[820px] mx-auto fade-in">
+            {otherWork.map(w => (
+              <a key={w.name} href={w.url} target="_blank" rel="noopener noreferrer"
+                 className="block rounded-xl border border-white/10 bg-white/5 p-4 hover:border-[var(--primary)]/50 transition">
+                <p className="font-semibold text-white text-sm">{w.name} <span className="text-[var(--primary)]">↗</span></p>
+                <p className="text-xs text-[var(--text-dim)] mt-1">{w.description}</p>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact */}
+      {/* Cómo trabajo */}
+      <section id="about" className="section">
+        <div className="container">
+          <h2 className="section-title">Cómo trabajo</h2>
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+            <div className="about-text fade-in text-[1.1rem] text-[var(--text-dim)] leading-8">
+              <p>Primero entiendo cómo funciona un negocio: dónde hay tareas repetitivas, información dispersa o procesos que consumen tiempo. Después diseño la solución adecuada, que a veces es una aplicación web y otras una automatización, una integración o IA.</p>
+              <p className="mt-4">Vengo de operaciones, gestión y educación, además del desarrollo de software. Eso me permite traducir necesidades del negocio en herramientas que la gente realmente usa.</p>
+            </div>
+
+            <div className="skills-section fade-in">
+              <h3 className="font-semibold text-white">Lo que construyo</h3>
+              <ul className="text-[1.05rem] text-[var(--text-dim)] space-y-2 mt-3">
+                <li>✔ Aplicaciones web a medida y plataformas internas</li>
+                <li>✔ Automatización de procesos e integraciones por API</li>
+                <li>✔ Dashboards y analítica</li>
+                <li>✔ Soluciones con IA</li>
+              </ul>
+              <div className="mt-6 pt-4 border-t border-white/10">
+                <p className="text-xs font-semibold text-white/60 mb-3 uppercase tracking-wider">Herramientas frecuentes</p>
+                <p className="text-xs text-[var(--text-dim)] opacity-80">Python · React · Next.js · TypeScript · Supabase · PostgreSQL · Google Apps Script · APIs · Vercel</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trayectoria */}
+      <section id="trayectoria" className="section projects">
+        <div className="container">
+          <h2 className="section-title fade-in">Trayectoria</h2>
+          <div className="grid md:grid-cols-[2fr_1fr] gap-12 max-w-[1000px] mx-auto">
+            <ol className="fade-in border-l border-white/10 space-y-8 ml-2">
+              {trayectoria.map(e => (
+                <li key={`${e.period}-${e.place}`} className="pl-6 relative">
+                  <span aria-hidden className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full" style={{background:'var(--primary)'}} />
+                  <p className="text-xs font-mono text-[var(--primary)]">{e.period}</p>
+                  <p className="font-semibold text-white">{e.role}</p>
+                  <p className="text-sm text-neutral-400">{e.place}</p>
+                  <p className="text-sm text-[var(--text-dim)] mt-1">{e.summary}</p>
+                </li>
+              ))}
+            </ol>
+            <aside className="fade-in">
+              <h3 className="font-semibold text-white mb-3">Formación</h3>
+              <ul className="space-y-2 text-sm text-[var(--text-dim)]">
+                {formacion.map(f => <li key={f}>{f}</li>)}
+              </ul>
+              <a href="https://linkedin.com/in/jpdevz" target="_blank" rel="noopener noreferrer"
+                 className="inline-block mt-6 px-5 py-3 rounded-md font-semibold text-sm"
+                 style={{background:'var(--gradient)', color:'var(--dark)'}}>Ver perfil en LinkedIn</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      {/* Contacto */}
       <section id="contact" className="section contact">
         <div className="container">
           <h2 className="section-title fade-in">¿Hablamos de tu proyecto?</h2>
@@ -176,19 +173,16 @@ export function Landing(){
             </p>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 mb-12">
               <a className="contact-item fade-in" href="mailto:jpizarro@jpdevz.com">
-                <div className="text-[2rem]" style={{color:'var(--primary)'}}>📧</div>
-                <div className="font-semibold mb-1">Correo</div>
+                <div className="font-semibold mb-1 text-[var(--primary)]">Correo</div>
                 <div className="text-[var(--text-dim)] text-sm">La mejor opción para consultas o nuevos proyectos.</div>
               </a>
-              <a className="contact-item fade-in" href="https://linkedin.com/in/jpdevz" target="_blank">
-                <div className="text-[2rem]" style={{color:'var(--primary)'}}>💼</div>
-                <div className="font-semibold mb-1">LinkedIn</div>
-                <div className="text-[var(--text-dim)] text-sm">Conoce mi experiencia profesional y conectemos.</div>
+              <a className="contact-item fade-in" href="https://linkedin.com/in/jpdevz" target="_blank" rel="noopener noreferrer">
+                <div className="font-semibold mb-1 text-[var(--primary)]">LinkedIn</div>
+                <div className="text-[var(--text-dim)] text-sm">Mi experiencia profesional y oportunidades laborales.</div>
               </a>
-              <a className="contact-item fade-in" href="https://github.com/jpdevz" target="_blank">
-                <div className="text-[2rem]" style={{color:'var(--primary)'}}>💻</div>
-                <div className="font-semibold mb-1">GitHub</div>
-                <div className="text-[var(--text-dim)] text-sm">Explora algunos de los proyectos y tecnologías con las que trabajo.</div>
+              <a className="contact-item fade-in" href="https://github.com/jpdevz" target="_blank" rel="noopener noreferrer">
+                <div className="font-semibold mb-1 text-[var(--primary)]">GitHub</div>
+                <div className="text-[var(--text-dim)] text-sm">Código y proyectos públicos.</div>
               </a>
             </div>
           </div>
