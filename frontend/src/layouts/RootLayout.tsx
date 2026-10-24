@@ -5,11 +5,14 @@ export function RootLayout(){
   return (
     <div>
       <Navbar />
-      <main className="pt-[88px]">{/* padding-top para despegar del navbar fijo */}
+      <main className="pt-[72px]">{/* padding-top para despegar del navbar fijo */}
         <Outlet />
       </main>
-      <footer className="text-center py-6 text-sm text-neutral-400 border-t border-neutral-800">
-        © {new Date().getFullYear()} JPDEVZ
+      <footer className="border-t border-line py-8 text-sm text-dim">
+        <div className="container flex flex-col gap-1 sm:flex-row sm:justify-between">
+          <span>© {new Date().getFullYear()} Juan Pablo Pizarro Martínez</span>
+          <span>Business Automation &amp; Digital Solutions</span>
+        </div>
       </footer>
     </div>
   )
