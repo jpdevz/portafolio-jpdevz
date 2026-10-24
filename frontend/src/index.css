@@ -28,7 +28,7 @@
 
 @theme inline{
   --font-sans:Inter,system-ui,sans-serif;
-  --font-display:"Instrument Serif",Georgia,serif;
+  --font-display:"Plus Jakarta Sans",Inter,system-ui,sans-serif;
   --font-mono:"JetBrains Mono",ui-monospace,monospace;
   --color-bg:var(--bg);
   --color-surface:var(--surface);
@@ -78,12 +78,12 @@ a{color:inherit}
 
 /* === Tipografía de apoyo === */
 .eyebrow{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.display{font-family:var(--font-display);font-weight:400;letter-spacing:-.015em;line-height:1.04}
-.display em{font-style:italic;color:var(--accent)}
+.display{font-family:var(--font-display);font-weight:700;letter-spacing:-.03em;line-height:1.08}
+.display em{font-style:normal;color:var(--accent)}
 .section{padding:104px 0}
 .section-alt{background:color-mix(in srgb,var(--surface) 55%,var(--bg))}
 .section-head{max-width:640px;margin-bottom:56px}
-.section-title{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.2rem);line-height:1.08;letter-spacing:-.015em;margin:12px 0 0}
+.section-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.12;letter-spacing:-.03em;margin:12px 0 0}
 
 /* === Hero === */
 .hero{padding:72px 0 88px}
@@ -123,7 +123,7 @@ a{color:inherit}
 /* === Proceso === */
 .step{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
 .step:first-child{border-top:0;padding-top:0}
-.step-num{font-family:var(--font-display);font-size:2rem;line-height:1;color:var(--accent)}
+.step-num{font-family:var(--font-display);font-weight:800;font-size:1.6rem;line-height:1.1;color:var(--accent)}
 .step h3{margin:0 0 4px;font-size:1.05rem;font-weight:600}
 .step p{margin:0;color:var(--ink-dim);font-size:.96rem}
 

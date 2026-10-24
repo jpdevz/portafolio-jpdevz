@@ -44,7 +44,7 @@ export function Landing(){
         <div className="container grid items-center gap-12 md:grid-cols-[1.15fr_1fr]">
           <div>
             <p className="eyebrow mb-5">Business Automation &amp; Digital Solutions</p>
-            <h1 className="display text-[2.9rem] sm:text-[3.8rem] lg:text-[4.6rem]">
+            <h1 className="display text-[2.3rem] sm:text-[3rem] lg:text-[3.6rem]">
               Transformo procesos complejos en soluciones digitales <em>simples.</em>
             </h1>
             <p className="mt-6 max-w-[34rem] text-lg text-dim">
