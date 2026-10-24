@@ -158,6 +158,7 @@ export function Landing(){
           <div className="section-head fade-in">
             <p className="eyebrow">Perfil</p>
             <h2 className="section-title">Trayectoria</h2>
+            <p className="mt-5 text-dim">Soy Juan Pablo Pizarro Martínez; profesionalmente, JP Pizarro.</p>
           </div>
           <div className="fade-in max-w-[760px]">
             <dl className="m-0 space-y-6">

@@ -10,7 +10,7 @@ export function RootLayout(){
       </main>
       <footer className="border-t border-line py-8 text-sm text-dim">
         <div className="container flex flex-col gap-1 sm:flex-row sm:justify-between">
-          <span>© {new Date().getFullYear()} JP Pizarro</span>
+          <span>© {new Date().getFullYear()} Juan Pablo Pizarro Martínez</span>
           <span>Business Automation &amp; Digital Solutions</span>
         </div>
       </footer>
