@@ -41,6 +41,17 @@ export const projects: Project[] = [
     flow: ['Clase en vivo en Jitsi', 'Asistencia registrada en Moodle', 'Reporte en Looker Studio'],
     tags: ['Moodle', 'Apps Script', 'APIs'],
   },
+  {
+    title: 'Masterplan de lotes 360°',
+    subtitle: 'Demo de visor interactivo para loteos',
+    problem: 'Un loteo con tomas de dron no tenía cómo mostrarlas en internet, y el estado de cada lote se comunicaba a mano.',
+    solution: 'Un visor web dibuja los lotes sobre el panorama 360° y sobre un mapa 2D. Cada lote muestra estado, superficie y contacto por WhatsApp, y un panel con login permite editarlos. Las tomas son de un colaborador.',
+    results: ['Plano del topógrafo convertido en lotes sobre la foto de dron', 'Estado de cada lote editable sin tocar código', 'Demo en línea, con respaldo si la base de datos no responde'],
+    flow: ['Plano del topógrafo', 'Lotes proyectados sobre el panorama', 'Visor público y panel de edición'],
+    tags: ['Next.js', 'Supabase', 'Photo Sphere Viewer'],
+    demoUrl: 'https://demolotes.jpdevz.com/',
+    demoLabel: 'Ver demo',
+  },
 ]
 
 export const otherWork = [

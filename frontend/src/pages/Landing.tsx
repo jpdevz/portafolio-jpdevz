@@ -108,7 +108,7 @@ export function Landing(){
             <p className="eyebrow">Evidencia</p>
             <h2 className="section-title">Casos reales, del problema al resultado.</h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {projects.map(project => (
               <div key={project.title} className="fade-in">
                 <CardProyecto {...project} />
